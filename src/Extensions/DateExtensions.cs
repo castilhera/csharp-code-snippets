@@ -5,6 +5,9 @@ namespace Extensions;
 
 public static class DateExtensions
 {
+    public static bool IsWeekend(this DateTime dateTime) 
+        => dateTime.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday;
+
     public static DateOnly ToFirstDayOfMonth(this DateOnly dateOnly)
         => new(dateOnly.Year, dateOnly.Month, 1);
 
