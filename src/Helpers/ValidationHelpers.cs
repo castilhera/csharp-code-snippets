@@ -10,10 +10,10 @@ namespace Helpers
         [GeneratedRegex(@"\d{3}\.?\d{3}\.?\d{3}-?\d{2}")]
         private static partial Regex CpfRegex();
 
-        public static bool IsValidCnpj(string text)
-            => CnpjRegex().IsMatch(text.Trim());
+        public static bool IsValidCnpj(string str)
+            => CnpjRegex().IsMatch(str.Trim());
 
-        public static bool IsValidCpf(string text)
-            => CpfRegex().IsMatch(text.Trim());
+        public static bool IsValidCpf(string str)
+            => CpfRegex().IsMatch(str.Trim());
     }
 }
